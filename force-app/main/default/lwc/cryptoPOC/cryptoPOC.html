@@ -1,0 +1,96 @@
+<template>
+  <lightning-layout>
+    <lightning-layout-item padding="around-small" size="6">
+      <lightning-card title="Using Apex Crypto Class">
+        <div class="slds-var-p-around_medium lgc-bg">
+          <lightning-radio-group
+            name="radioGroup"
+            label="Select Option"
+            options={optionsEncryptionApex}
+            value={selectedValueApex}
+            required
+            type="button"
+            onchange={handleApexGroupChange}
+          ></lightning-radio-group>
+        </div>
+        <div class="slds-var-p-around_medium lgc-bg">
+          <lightning-input
+            type="text"
+            label="Key - Employee Number"
+            value={employeeNumberApex}
+          ></lightning-input>
+        </div>
+        <div class="slds-var-p-around_medium lgc-bg">
+          <lightning-input
+            type="text"
+            label="Input"
+            value={inputApex}
+            onchange={inputApexChange}
+          ></lightning-input>
+        </div>
+        <div class="slds-var-p-around_medium lgc-bg">
+            <lightning-input
+              type="text"
+              label="Output"
+              value={outputApex}
+              disabled
+            ></lightning-input>
+          </div>
+        <div class="slds-align_absolute-center">
+          <lightning-button
+            label={labelApexButton}
+            title="Non-primary action"
+            onclick={handleClickApexButton}
+            class="slds-var-m-left_x-small"
+          ></lightning-button>
+        </div>
+      </lightning-card>
+    </lightning-layout-item>
+    <lightning-layout-item padding="around-small" size="6">
+      <lightning-card title="Using CryptoJS Library">
+        <div class="slds-var-p-around_medium lgc-bg">
+          <lightning-radio-group
+            name="radioGroup"
+            label="Select Option"
+            options={optionsEncryptionJS}
+            value={selectedValueJS}
+            required
+            type="button"
+            onchange={handleJSGroupChange}
+          ></lightning-radio-group>
+        </div>
+        <div class="slds-var-p-around_medium lgc-bg">
+          <lightning-input
+            type="text"
+            label="Key - Employee Number"
+            value={employeeNumberJS}
+          ></lightning-input>
+        </div>
+        <div class="slds-var-p-around_medium lgc-bg">
+          <lightning-input
+            type="text"
+            label="Input"
+            value={inputJS}
+            onchange={inputJSChange}
+          ></lightning-input>
+        </div>
+        <div class="slds-var-p-around_medium lgc-bg">
+            <lightning-input
+              type="text"
+              label="Output"
+              value={outputJS}
+              disabled
+            ></lightning-input>
+          </div>
+        <div class="slds-align_absolute-center">
+          <lightning-button
+            label={labelJSButton}
+            title="Non-primary action"
+            onclick={handleClickJSButton}
+            class="slds-var-m-left_x-small"
+          ></lightning-button>
+        </div>
+      </lightning-card>
+    </lightning-layout-item>
+  </lightning-layout>
+</template>

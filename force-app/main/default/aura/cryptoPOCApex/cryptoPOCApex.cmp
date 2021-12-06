@@ -1,0 +1,27 @@
+<aura:component implements="force:appHostable" controller="CryptoPOC">
+  <aura:attribute name="key" type="String" />
+  <aura:attribute name="algorithm" type="String" />
+  <aura:attribute name="input" type="String" />
+  <aura:attribute name="output" type="String" />
+  
+  <lightning:card title="Using Apex Crypto Class">
+    <div><lightning:input name="input" label="Input" value="{!v.input}" /></div>
+    <div>
+      <lightning:textarea name="output" readonly="true" value="{!v.output}" />
+    </div>
+    <div class="slds-align_absolute-center">
+      <lightning:button
+        variant="brand"
+        label="Encrypt"
+        title="Encrypt"
+        onclick="{! c.handleEncrypt }"
+      />
+      <lightning:button
+        variant="Neutral"
+        label="Decrypt"
+        title="Decrypt"
+        onclick="{! c.handleDecrypt }"
+      />
+    </div>
+  </lightning:card>
+</aura:component>
